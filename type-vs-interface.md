@@ -1,0 +1,11 @@
+# Core Differences Between Type Aliases and Interfaces in TypeScript
+
+When developing applications with TypeScript, defining proper data structures is an essential part of writing clean, maintainable, and scalable code. For this purpose, TypeScript provides two commonly used features: Type Aliases and Interfaces. Although both allow us to define the structure of objects, they differ in terms of flexibility, behavior, and extensibility. Understanding these differences helps us choose the right approach based on our development requirements.
+
+An Interface is primarily used to describe the structure of an object by defining its properties and their corresponding types. One of its key advantages is Declaration Merging. This feature allows us to declare multiple interfaces with the same name, and TypeScript automatically combines them into a single definition. It becomes particularly useful when extending third-party libraries or adding custom properties to global objects such as the window object.
+
+In contrast, a Type Alias offers greater flexibility by allowing us to define different kinds of types, including objects, primitive values, union types, and tuples. Unlike interfaces, type aliases do not support declaration merging, meaning we cannot redeclare an existing type alias with the same name to extend its definition. However, they provide powerful capabilities for creating complex type structures and combining multiple types.
+
+Both approaches serve important purposes in TypeScript development. When we need to define object structures that may require declaration merging or future extensions, interfaces are generally a suitable choice. On the other hand, when working with union types, primitive types, tuples, or more advanced type combinations, type aliases provide greater flexibility.
+
+Ultimately, choosing between Type Aliases and Interfaces depends on our project requirements, development approach, and the complexity of the types we need to define. Both are essential features of TypeScript, and understanding when to use each one allows us to write more structured, readable, and maintainable code. Maintaining consistency in our approach also helps keep the overall codebase organized and predictable.
